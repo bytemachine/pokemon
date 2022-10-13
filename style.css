@@ -1,0 +1,76 @@
+body {
+    font-family: monospace;
+    background-color: aquamarine;
+
+}
+.imagenes-container {
+
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* centra la imagen de arriba a abajo en % */
+    
+}
+.imagenes-container .imagen {
+    position: relative;
+    margin-right: -20px;
+    display: inline-flex;
+    flex-direction: column;
+
+}
+.imagenes-container .imagen img {
+    width: 70px;
+    height: 70px;
+    transition: transform 0.40s ease-in-out;
+}
+.imagenes-container .imagen .nombre {
+    position: absolute;
+    background-color: #000000;
+    border-radius: 5px;
+    color: #FFFFFF;
+    display: none;
+    min-width: 100px;
+    width: 150px;
+    top: -50px;
+    left: calc(-50% - 17px);
+    padding: 10px 15px;
+
+}
+
+.imagenes-container .imagen .nombre .text {
+    display: inline-block;
+    text-overflow: ellipsis; /* aun no entiendo como funciona */
+    overflow: hidden; /* Si el texto es muy grande lo esconde */
+    white-space: nowrap; /* Hace los espaciados mas pequenos */
+    text-align: center; /* centra el texto */
+    margin: 0 auto;
+    width: 150px; /* maximo 150px */
+    box-sizing: border-box; /* adapta al borderbox */
+}
+.imagenes-container .imagen:hover .nombre {
+    display: inline-block;
+    transform: translateY(-20px);
+}
+
+.imagenes-container .imagen .nombre::before {
+    content: "";
+    position: absolute;
+    width: 1px;
+    width: 1px;
+    left: 40%;
+    bottom: -20px;
+    border-top: 10px solid black;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+}
+
+.imagenes-container .imagen:hover img {
+    transform: translateY(-10px);
+}
+@media (max-width: 250px) {
+    .imagenes-container {
+        flex-direction: column;
+        height: 215vh;
+    }
+}
