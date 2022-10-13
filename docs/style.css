@@ -71,6 +71,6 @@ body {
 @media (max-width: 680px) {
     .imagenes-container {
         flex-direction: column;
-        height: 215vh;
+        height: 150vh;
     }
 }
