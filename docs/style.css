@@ -32,7 +32,6 @@ body {
     min-width: 100px;
     width: 150px;
     top: -50px;
-    left: calc(-50% - 17px);
     padding: 10px 15px;
 
 }
